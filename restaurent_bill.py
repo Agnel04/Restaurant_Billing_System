@@ -4,7 +4,7 @@ tym = datetime.datetime.now()
 
 # takes menu from txt file
 menu = {}
-with open("D:/Luminar/Python/Project/menu.txt", "r") as f :
+with open("menu.txt", "r") as f :
     for line in f :
         parts = line.strip().split()
         if len(parts) == 3 :
@@ -113,7 +113,7 @@ print("\n".join(bill))
 
 #  saving as a txt file
 
-file = f"D:/Luminar/Python/Project/receipt/{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_{customer_name.lower()}.txt"
+file = f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_{customer_name.lower()}.txt"
 with open(file,"w") as f :
     f.write("\n".join(bill))
 
