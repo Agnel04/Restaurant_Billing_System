@@ -54,7 +54,7 @@ while ans == "" or ans == "y":
 #  getting customer name & checks if entered a valid name
 
 customer_name = input("Enter customer name : ")
-while customer_name.isalpha() == False :
+while not customer_name.isalpha() :
     for i in customer_name :
         if i == " " :
             continue
@@ -65,7 +65,7 @@ while customer_name.isalpha() == False :
 #  getting phone number from customer & checks if entered a valid number
 
 ph_num = input(f"Enter {customer_name}'s phone number : ")
-while len(str(ph_num)) != 10 or int(ph_num.isdigit()) == False or ph_num.isalpha() == True :
+while not (ph_num.isdigit() and len(ph_num) == 10) :
     ph_num = input("Enter a valid phone number : ")
 
 #  generating bill
@@ -115,4 +115,5 @@ print("\n".join(bill))
 file = f"{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}_{customer_name.lower()}.txt"
 with open(file,"w") as f :
     f.write("\n".join(bill))
+
 
