@@ -77,7 +77,6 @@ bill = []
 
 bill.append("=" * 44 + "\n")
 bill.append(" " * 15 + "ABC RESTAURENT")
-bill.append(" " * 15 + "-" * 14 + "\n")
 bill.append(f"Date: {tym.strftime('%d-%m-%Y')}" + " " * 10 + f" Time: {tym.strftime('%I-%M-%S %p')}" + "\n")
 bill.append(f"Table number: {table_num}")
 bill.append(f"Customer name: {customer_name}")
